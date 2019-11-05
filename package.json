@@ -1,0 +1,17 @@
+{
+  "name": "kakunin_sample_project",
+  "version": "1.0.0",
+  "description": "Sample automation project with Kakunin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "kakunin": "cross-env NODE_ENV=prod kakunin"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^6.0.3",
+    "kakunin": "^3.0.1",
+    "chance": "^1.1.3"
+  }
+}
