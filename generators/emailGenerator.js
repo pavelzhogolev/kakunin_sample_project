@@ -1,5 +1,6 @@
 const { generators } = require('kakunin');
 const Chance = require('chance');
+const { variableStore } = require('kakunin');
 
 class EmailGenerator {
   isSatisfiedBy(name) {
@@ -8,7 +9,9 @@ class EmailGenerator {
 
   generate() {
     let chance = new Chance();
-    return Promise.resolve(chance.email());
+    let generatedEmail = chance.email()
+    variableStore.storeVariable('generatedEmail', generatedEmail);
+    return Promise.resolve(generatedEmail);
   }
 }
 

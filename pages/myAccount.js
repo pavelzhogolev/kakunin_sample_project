@@ -5,6 +5,8 @@ class MyAccountPage extends BasePage {
     super();
 
     this.url = '/index.php?controller=my-account';
+
+    this.accountNameHeader = element(by.css("div.header_user_info > a > span"));
   }
 }
 
